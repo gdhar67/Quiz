@@ -15,16 +15,34 @@
 
 
 
-Route::group(['middleware' => ['web']],function () {
+Route::group(['middleware' => ['web']],function () 
+
+{
 
 
 Route::get('/welcome', 'HomepageController@index');
 
-Route::get('/homepage', 'homepagecontroller@home');
+Route::get('/homepage', 'homepagecontroller@home',[
+
+	//'as'=>'home'
+
+	]);
 
 Route::post('/signup',[ 
 	'uses'=> 'usercontroller@postregister',
 	'as' => 'register'
-	]
-	);
+	]);
+
+Route::post('/signin',[ 
+	'uses'=> 'usercontroller@postlogin',
+	'as' => 'login'
+	]);
+
+Route::get('/dashboard', [
+	'uses' => 'usercontroller@getDashboard',
+	'as' => 'dashboard',
+	'middleware'=>'auth'
+	]);
+
+
 });
