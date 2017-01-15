@@ -22,11 +22,7 @@ Route::group(['middleware' => ['web']],function ()
 
 Route::get('/welcome', 'HomepageController@index');
 
-Route::get('/homepage', 'homepagecontroller@home',[
-
-	//'as'=>'home'
-
-	]);
+Route::get('/homepage', 'homepagecontroller@home');
 
 Route::post('/signup',[ 
 	'uses'=> 'usercontroller@postregister',
@@ -38,11 +34,32 @@ Route::post('/signin',[
 	'as' => 'login'
 	]);
 
+Route::get('/logout', [
+	'uses' => 'usercontroller@getLogout',
+	'as' => 'logout'
+	]);
+
 Route::get('/dashboard', [
-	'uses' => 'usercontroller@getDashboard',
+	'uses' => 'postcontroller@getDashboard',
 	'as' => 'dashboard',
 	'middleware'=>'auth'
 	]);
+Route::get('/question', [
+	'uses' => 'usercontroller@getQuizque',
+	'as' => 'question',
+	'middleware'=>'auth'
+	]);
+
+Route::post('/submitque',[ 
+	'uses'=> 'postcontroller@postCreatepost',
+	'as' => 'submit.que'
+	]);
+
+Route::post('/submitans',[ 
+	'uses'=> 'anscontroller@postRecordans',
+	'as' => 'submit.ans'
+	]);
+
 
 
 });

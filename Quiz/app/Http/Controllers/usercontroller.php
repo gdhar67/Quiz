@@ -8,13 +8,6 @@ use Illuminate\Support\Facades\Auth;
 class usercontroller extends Controller
 {
 
-	public function getDashboard()
-	{
-		return view('dashboard');
-	}
-
-
-
 	public function postregister(Request $request)
 	{
 		$name=$request['Name'];
@@ -57,4 +50,16 @@ class usercontroller extends Controller
 				return redirect() -> back();
 			}
 	}
-	}	
+	
+
+	public function getLogout()
+	{
+		Auth::logout();
+		return redirect()->route('dashboard');
+	}
+
+	public function getQuizque()
+	{
+		return view('question');
+	}
+}

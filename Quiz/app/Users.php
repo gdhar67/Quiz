@@ -9,4 +9,16 @@ class Users extends Model implements Authenticatable
 {
     
     use \Illuminate\Auth\Authenticatable;
+    
+    public function posts()
+    {
+    	return $this->hasMany('App\Post');
+    }
+
+    public function anss()
+    {
+    	return $this->hasMany('App\Ans');
+    }
+
+
 }
