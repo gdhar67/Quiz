@@ -60,7 +60,7 @@
 #####/submitans
 - The Answer for any Question is Submitted by this route.
 
-#####/wiewque
+#####/viewque
 - All the Submitted Question by the User can be viewed by this route.
 
 #####/edit
