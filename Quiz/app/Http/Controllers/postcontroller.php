@@ -29,7 +29,25 @@ class postcontroller extends Controller
 	}
 
 
-	public function postCreatepost(Request $request)
+	public function getViewque()
+	{
+		$posts= Post::orderBy('created_at','desc')->get();
+		
+		if($posts)
+		
+			return view('viewquestions',['posts' => $posts]);
+
+		else
+		{
+			return view('viewquestions',['posts' => null]);
+		}
+
+
+
+	}
+
+
+	public function postCreateque(Request $request)
 	{
 		
 		$this->validate($request,[
@@ -58,4 +76,39 @@ class postcontroller extends Controller
 
 		return redirect()->route('question')->with(['message'=>$message]);
 	}
+
+
+	public function postEditPost(Request $request){
+
+		$this->validate($request,[
+			'que' => 'required',
+			'option_a' => 'required' ,
+			'option_b' => 'required',
+			'option_c' => 'required',
+			'option_d' => 'required',
+			'ans' => 'required'
+
+			]);
+
+		$post =Post::find($request['postId']);
+		$post->que= $request['que'];
+		$post->option_a= $request['option_a'];
+		$post->option_b= $request['option_b'];
+		$post->option_c= $request['option_c'];
+		$post->option_d= $request['option_d'];
+		$post->ans= $request['ans'];
+		$post->update();
+		return response()->json([
+			'new_que' => $post -> que,
+			'new_opta'=> $post -> option_a,
+			'new_optb'=> $post -> option_b,
+			'new_optc'=> $post -> option_c,
+			'new_optd'=> $post -> option_d,
+			'new_ans' => $post -> ans
+			],200);
+
+	}
+
+
+
 }

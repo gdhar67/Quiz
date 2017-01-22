@@ -1,7 +1,7 @@
 <!DOCTYPE html lang="en">
 <html>
     <head>
-        <title>@yield('title')</title>
+        <title>DASHBOARD</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
 
@@ -24,6 +24,7 @@
              
               <ul class="nav navbar-nav navbar-right">
                   <li><a >Your Score : {{ Auth::user()->score }}</a></li>
+                  <li><a href="{{ route('viewque') }}">View Your Questions</a></li>
                   <li><a href="{{ route('question') }}">Submit Question</a></li>
                   <li><a href="{{ route('logout') }}">Logout</a></li>
                   

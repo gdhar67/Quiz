@@ -44,6 +44,13 @@ Route::get('/dashboard', [
 	'as' => 'dashboard',
 	'middleware'=>'auth'
 	]);
+
+Route::get('/viewque', [
+	'uses' => 'postcontroller@getViewque',
+	'as' => 'viewque',
+	'middleware'=>'auth'
+	]);
+
 Route::get('/question', [
 	'uses' => 'usercontroller@getQuizque',
 	'as' => 'question',
@@ -51,7 +58,7 @@ Route::get('/question', [
 	]);
 
 Route::post('/submitque',[ 
-	'uses'=> 'postcontroller@postCreatepost',
+	'uses'=> 'postcontroller@postCreateque',
 	'as' => 'submit.que'
 	]);
 
@@ -60,6 +67,9 @@ Route::post('/submitans',[
 	'as' => 'submit.ans'
 	]);
 
-
+Route::post('/edit',[
+	'uses'=> 'postcontroller@postEditPost',
+	'as' => 'edit'
+]);
 
 });

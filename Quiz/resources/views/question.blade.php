@@ -2,7 +2,7 @@
 <html>
    <head>
 
-        <title>@yield('title')</title>
+        <title>SUBMIT QUESTION</title>
 
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
@@ -24,14 +24,15 @@
                           <span class="icon-bar"></span>
                         </button>
 
+                        
                         <a class="navbar-brand" href="{{ route('dashboard') }}">Home</a>
 
                       </div>
                       
                       <div>
                         <ul class="nav navbar-nav navbar-right">
-                          <li><a href="{{ route('logout') }}">Logout</a></li>
-                          
+                          <li><a >Your Score : {{ Auth::user()->score }}</a></li>
+                          <li><a href="{{ route('logout') }}">Logout</a></li>                          
                         </ul>
 
                     </div>
@@ -93,7 +94,8 @@
                       </section>
 
                     </div>
-                 
+
+
     </body>
 
 </html>
