@@ -24,7 +24,7 @@
 - After submitting the Question a message is displayed telling the User that the post was successfully submitted or not.
 - The User can view the previously submitted Questions By clicking On **View Your Questions** button provided in the DashBoard.
 - It Redirects the User to a Page where the user is able see the Questions and their Answer, and allows the User to make changes in the post by clicking on **Edit This Post**.
-- A **Home** button is provided so that the User can go back to DashBoard after submitting the Question
+- A **Home** button is provided so that the User can go back to DashBoard after submitting the Question or after viewing the submitted Questions.
 - In all the Pages except HomePage, A **Logout** button is provided, So that the User can Logout at any instant.
 
 -----------------------------------------------------------------------------------
