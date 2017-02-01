@@ -18,7 +18,7 @@ class CreateAnsTable extends Migration
             $table->timestamps();
             $table->integer('users_id');
             $table->integer('post_id')->unique();
-            $table->text('Ans');
+            $table->text('ans');
         });
     }
 

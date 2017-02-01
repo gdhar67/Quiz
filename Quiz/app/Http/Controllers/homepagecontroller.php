@@ -8,14 +8,14 @@ use App\Http\Requests;
 
 class HomepageController extends Controller
 {
-    public function index()
+    public function Index()
     {
 
     	return view('welcome');
     }
 
 
-    public function home()
+    public function Home()
     {
 
     	return view('homepage');

@@ -20,56 +20,58 @@ Route::group(['middleware' => ['web']],function ()
 {
 
 
-Route::get('/welcome', 'HomepageController@index');
+Route::get('/welcome', 'HomepageController@Index');
 
-Route::get('/homepage', 'homepagecontroller@home');
+Route::get('/homepage', 'Homepagecontroller@Home');
 
 Route::post('/signup',[ 
-	'uses'=> 'usercontroller@postregister',
+	'uses'=> 'UserController@PostRegister',
 	'as' => 'register'
 	]);
 
 Route::post('/signin',[ 
-	'uses'=> 'usercontroller@postlogin',
+	'uses'=> 'UserController@PostLogin',
 	'as' => 'login'
 	]);
 
 Route::get('/logout', [
-	'uses' => 'usercontroller@getLogout',
+	'uses' => 'UserController@GetLogout',
 	'as' => 'logout'
 	]);
 
 Route::get('/dashboard', [
-	'uses' => 'postcontroller@getDashboard',
+	'uses' => 'PostController@GetDashboard',
 	'as' => 'dashboard',
 	'middleware'=>'auth'
 	]);
 
 Route::get('/viewque', [
-	'uses' => 'postcontroller@getViewque',
+	'uses' => 'PostController@GetViewQue',
 	'as' => 'viewque',
 	'middleware'=>'auth'
 	]);
 
 Route::get('/question', [
-	'uses' => 'usercontroller@getQuizque',
+	'uses' => 'UserController@GetQuizQue',
 	'as' => 'question',
 	'middleware'=>'auth'
 	]);
 
 Route::post('/submitque',[ 
-	'uses'=> 'postcontroller@postCreateque',
+	'uses'=> 'PostController@PostCreateQue',
 	'as' => 'submit.que'
 	]);
 
 Route::post('/submitans',[ 
-	'uses'=> 'anscontroller@postRecordans',
+	'uses'=> 'AnsController@PostRecordAns',
 	'as' => 'submit.ans'
 	]);
 
 Route::post('/edit',[
-	'uses'=> 'postcontroller@postEditPost',
+	'uses'=> 'PostController@PostEditPost',
 	'as' => 'edit'
-]);
+	]);
+
+
 
 });

@@ -6,9 +6,9 @@ use App\Ans;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
-class postcontroller extends Controller
+class PostController extends Controller
 {
-	public function getDashboard()
+	public function GetDashboard()
 	{
 		$posts= Post::orderBy('created_at','desc')->get();
 		$anss= Ans::orderBy('created_at','desc')->get(); 
@@ -29,7 +29,7 @@ class postcontroller extends Controller
 	}
 
 
-	public function getViewque()
+	public function GetViewQue()
 	{
 		$posts= Post::orderBy('created_at','desc')->get();
 		
@@ -47,7 +47,7 @@ class postcontroller extends Controller
 	}
 
 
-	public function postCreateque(Request $request)
+	public function PostCreateQue(Request $request)
 	{
 		
 		$this->validate($request,[
@@ -78,7 +78,7 @@ class postcontroller extends Controller
 	}
 
 
-	public function postEditPost(Request $request){
+	public function PostEditPost(Request $request){
 
 		$this->validate($request,[
 			'que' => 'required',
@@ -108,6 +108,9 @@ class postcontroller extends Controller
 			],200);
 
 	}
+
+
+
 
 
 

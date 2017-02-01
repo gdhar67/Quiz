@@ -6,10 +6,10 @@ Use App\Post;
 use App\Ans;
 use Illuminate\Http\Request;
 
-class anscontroller extends Controller
+class AnsController extends Controller
 {
 
-	public function postRecordans(Request $request)
+	public function PostRecordAns(Request $request)
 	{
 		
 		

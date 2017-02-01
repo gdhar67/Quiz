@@ -5,10 +5,10 @@ use App\Users;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
-class usercontroller extends Controller
+class UserController extends Controller
 {
 
-	public function postregister(Request $request)
+	public function PostRegister(Request $request)
 	{
 		$name=$request['Name'];
 		$username=$request['Username'];
@@ -33,7 +33,7 @@ class usercontroller extends Controller
 
 	}
 
-	public function postlogin(Request $request)
+	public function PostLogin(Request $request)
 	{
 
 		$this->validate($request, [
@@ -51,14 +51,15 @@ class usercontroller extends Controller
 			}
 	}
 	
-
-	public function getLogout()
+	public function GetLogout()
 	{
 		Auth::logout();
 		return redirect()->route('dashboard');
 	}
 
-	public function getQuizque()
+
+
+	public function GetQuizQue()
 	{
 		return view('question');
 	}
