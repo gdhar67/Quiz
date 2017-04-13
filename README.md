@@ -119,6 +119,7 @@
 * Clone the repository into a local folder in your computer.
 * Use `git pull` to pull the code from Github.
 * Go to the Quiz Directory from console and use the command `php artisan serve` to start your localhost server.
+* Create a database named `dbuser`.
 * Run the migrations using the command `php artisan migrate`.
 * Then Run the seeder using the command `php artisan db:seed` which will enter the data as folows:
 			
