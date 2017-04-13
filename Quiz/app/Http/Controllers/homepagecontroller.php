@@ -20,4 +20,5 @@ class HomepageController extends Controller
 
     	return view('homepage');
     }
+
 }
