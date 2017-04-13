@@ -2,14 +2,14 @@
 ## **A basic website for _Testing Your Knowledge_:stuck_out_tongue_winking_eye:**
 
 
-###SERVER USED
+### SERVER USED
 
 - Laravel Framework
 - Version 5.3.28
 
 -----------------------------------------------------------------------------------
 
-###OVERVIEW
+### OVERVIEW
 
 - First, HomePage is displayed in which there are Two Forms namely **Register And LogIn form** . 
 - A user can either Register, by providing his/her details in the Register Form or directly LogIn if he/she is a Registered User.
@@ -29,53 +29,53 @@
 
 -----------------------------------------------------------------------------------
 
-###SERVER ROUTES
+### SERVER ROUTES
 
-#####/homepage
+##### /homepage
 - It takes us to the homepage of the project.
 - A User can Signup if he/she doesn't have a User Account.
 - If the User is a Registered User then he/she can Signin from this Page.
 
-#####/signup
+##### /signup
 - SignUp is done using this route.
 - The newly Signed In User is redirected to the DashBoard where he/she can Answer Questions asked by other Users.
 
-#####/signin
+##### /signin
 - SignIn is done using this route.
 - The User is Authenticated and redirected to the DashBoard where he/she can Answer Questions asked by other Users.
 
-#####/logout
+##### /logout
 - User is Logged Out using this route.
 - After Logout User is redirected to the HomePage.
 
-#####/dashboard
+##### /dashboard
 - This route is used to access the DashBoard.
 
-#####/question
+##### /question
 - This route is used to Submit a Question by a Signed In User.
 
-#####/submitque
+##### /submitque
 - The Question is Submitted using this route.
 
-#####/submitans
+##### /submitans
 - The Answer for any Question is Submitted by this route.
 
-#####/viewque
+##### /viewque
 - All the Submitted Question by the User can be viewed by this route.
 
-#####/edit
+##### /edit
 - The Submitted Question can be edited by this route.
 
 -----------------------------------------------------------------------------------
 
 
-###DATABASES/TABLES 
+### DATABASES/TABLES 
 
 
-####Database : dbuserr
-===================================================================================
-#####Table : users
-#####Fields
+#### Database : dbuserr
+=================================================================================
+##### Table : users
+##### Fields
 * Id
 * created_at
 * updated_at
@@ -85,10 +85,10 @@
 * score
 * remember_token
 
-===================================================================================
+=================================================================================
 
-#####Table : posts
-#####Fields
+##### Table : posts
+##### Fields
 * Id
 * created_at
 * updated_at
@@ -99,10 +99,10 @@
 * option_d
 * ans
 
-===================================================================================
+=================================================================================
 
-#####Table : posts
-#####Fields
+##### Table : posts
+##### Fields
 * Id
 * created_at
 * updated_at
@@ -114,7 +114,7 @@
 -----------------------------------------------------------------------------------
 
 
-###BUILD INSTRUCTIONS
+### BUILD INSTRUCTIONS
 
 * Clone the repository into a local folder in your computer.
 * Use `git pull` to pull the code from Github.
@@ -188,4 +188,4 @@
 			
 -----------------------------------------------------------------------------------
 
-####Enjoy the website. Cheers:smile:
+#### Enjoy the website. Cheers:smile:
